@@ -7,7 +7,6 @@ import java.io.IOException;
 import es.finalPrimerCurso.finalPrimerCurso.Clases.Preguntas;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
 
 public class SeleccionCantidadPreguntasController {
 

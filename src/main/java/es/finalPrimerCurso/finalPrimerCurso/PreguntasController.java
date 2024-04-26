@@ -1,4 +1,4 @@
-package es.finalPrimerCurso.finalPrimerCurso;
+  package es.finalPrimerCurso.finalPrimerCurso;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import java.io.IOException;
@@ -10,7 +10,7 @@ import javafx.scene.control.Label;
 
 
 
-public class preguntasController implements Initializable{
+public class PreguntasController implements Initializable{
 	
 	private static int acierto = 0;
 	private static int index = 0;
@@ -28,7 +28,20 @@ public class preguntasController implements Initializable{
 	private Label respuesta4;
 	
 	
-    public void initialize(URL location, ResourceBundle resources) {
+	
+	
+	
+    public static void setAcierto(int acierto) {
+		PreguntasController.acierto = acierto;
+	}
+
+
+	public static void setIndex(int index) {
+		PreguntasController.index = index;
+	}
+
+
+	public void initialize(URL location, ResourceBundle resources) {
         pregunta.setText(Preguntas.getListaDePreguntas().get(index).getPregunta());
         respuesta1.setText(Preguntas.getListaDePreguntas().get(index).getConjuntoDeRespuestas().get(0));
         respuesta2.setText(Preguntas.getListaDePreguntas().get(index).getConjuntoDeRespuestas().get(1));
@@ -41,15 +54,19 @@ public class preguntasController implements Initializable{
     	Preguntas.setCantidadDePreguntas(Preguntas.getCantidadDePreguntas()-1);
     	
 		 if(Preguntas.getCantidadDePreguntas() == 0) {
-			 System.out.printf("Has acertado %d/%d",acierto,index+1);
-			 System.exit(0);
-		 }	
-		 try {
-			index++;
-			App.setRoot("preguntas");
-		} catch (IOException e) {
-			e.printStackTrace();
-		} 
+			 try {
+				 App.setRoot("pantallaFinal");
+			 }catch (IOException e) {
+				e.printStackTrace();
+			}
+		 }else {	
+			 try {
+				index++;
+				App.setRoot("preguntas");
+			} catch (IOException e) {
+				e.printStackTrace();
+			} 
+		 }
 	}
     
 	@FXML
@@ -86,4 +103,7 @@ public class preguntasController implements Initializable{
 		avanzar();
 		
 	}
+
+
+	
 }
