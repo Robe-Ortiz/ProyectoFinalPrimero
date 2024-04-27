@@ -8,11 +8,12 @@ import java.util.List;
 public class Preguntas {
 
 	private static List<Pregunta> listaDePreguntas = new ArrayList<>();
+	private static int cantidadDePreguntasOriginal = 0;
 	private static int cantidadDePreguntas = 0;
 	
 	
 	public Preguntas() {
-		listaDePreguntas.add(new Pregunta("¿Cuanto mido?.","189cm.","187cm.","185cm.","191cm."));				
+		listaDePreguntas.add(new Pregunta("¿Cuanto mido?","189cm.","187cm.","185cm.","191cm."));				
 		listaDePreguntas.add(new Pregunta("¿Cómo me llamo?","Roberto","Raúl","René","Agustín"));		
 		listaDePreguntas.add(new Pregunta("¿Cuántos años tengo?","30","20","10","40"));		
 		listaDePreguntas.add(new Pregunta("¿Cuántos hijos tengo?","2","1","0","3"));		
@@ -33,9 +34,19 @@ public class Preguntas {
 		return cantidadDePreguntas;
 	}
 
+	public static int getCantidadDePreguntasOriginal() {
+		return cantidadDePreguntasOriginal;
+	}
+
 	public static void setCantidadDePreguntas(int cantidadDePreguntas) {
 		Preguntas.cantidadDePreguntas = cantidadDePreguntas;
 	}
+
+	public static void setCantidadDePreguntasOriginal(int cantidadDePreguntasOriginal) {
+		Preguntas.cantidadDePreguntasOriginal = cantidadDePreguntasOriginal;
+	}
+	
+	
 
 	
 	

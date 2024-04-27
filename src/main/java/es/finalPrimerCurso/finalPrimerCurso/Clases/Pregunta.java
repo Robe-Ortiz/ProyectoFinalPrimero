@@ -45,7 +45,17 @@ public class Pregunta {
 		return respuestaCorrecta;
 	}
 
+	public String getRespuestaIncorrectaA() {
+		return respuestaIncorrectaA;
+	}
 
+	public String getRespuestaIncorrectaB() {
+		return respuestaIncorrectaB;
+	}
+
+	public String getRespuestaIncorrectaC() {
+		return respuestaIncorrectaC;
+	}
 
 	public List<String> getConjuntoDeRespuestas() {
 		return conjuntoDeRespuestas;

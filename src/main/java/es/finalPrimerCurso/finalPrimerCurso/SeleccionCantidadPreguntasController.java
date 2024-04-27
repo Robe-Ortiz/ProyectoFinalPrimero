@@ -22,14 +22,17 @@ public class SeleccionCantidadPreguntasController {
 	@FXML
 	public void btn3(ActionEvent event) {
 		Preguntas.setCantidadDePreguntas(3);
+		Preguntas.setCantidadDePreguntasOriginal(3);
 		avanzar();
 	}
 	public void btn5(ActionEvent event) {
 		Preguntas.setCantidadDePreguntas(5);
+		Preguntas.setCantidadDePreguntasOriginal(5);
 		avanzar();
 	}
 	public void btn10(ActionEvent event) {
 		Preguntas.setCantidadDePreguntas(10);
+		Preguntas.setCantidadDePreguntasOriginal(10);
 		avanzar();
 	}
 	

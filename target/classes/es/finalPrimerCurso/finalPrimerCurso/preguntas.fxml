@@ -32,9 +32,9 @@
             <Font size="23.0" />
          </font>
       </Label>
+      <Button mnemonicParsing="false" onAction="#btnRespuesta1" prefHeight="25.0" prefWidth="120.0" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
       <Button mnemonicParsing="false" onAction="#btnRespuesta2" prefHeight="25.0" prefWidth="120.0" text="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
       <Button mnemonicParsing="false" onAction="#btnRespuesta3" prefHeight="26.0" prefWidth="120.0" text="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
-      <Button mnemonicParsing="false" onAction="#btnRespuesta1" prefHeight="25.0" prefWidth="120.0" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
       <Button mnemonicParsing="false" onAction="#btnRespuesta4" prefHeight="25.0" prefWidth="120.0" text="4" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
       <Label fx:id="respuesta1" GridPane.columnIndex="1" GridPane.rowIndex="3" />
       <Label fx:id="respuesta2" GridPane.columnIndex="1" GridPane.rowIndex="5" />

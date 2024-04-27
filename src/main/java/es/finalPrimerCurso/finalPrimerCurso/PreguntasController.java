@@ -31,13 +31,16 @@ public class PreguntasController implements Initializable{
 	
 	
 	
-    public static void setAcierto(int acierto) {
-		PreguntasController.acierto = acierto;
+    public static int getAcierto() {
+		return acierto;
 	}
 
+	public static void restablecerAciertos() {
+		acierto = 0;
+	}
 
-	public static void setIndex(int index) {
-		PreguntasController.index = index;
+	public static void restablecerIndiceDePreguntas() {
+		index = 0;
 	}
 
 

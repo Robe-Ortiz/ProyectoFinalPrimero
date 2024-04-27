@@ -4,57 +4,52 @@ import javafx.fxml.FXML;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Collections;
-
-import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.pdmodel.PDPage;
-import org.apache.pdfbox.pdmodel.PDPageContentStream;
-import org.apache.pdfbox.pdmodel.common.PDRectangle;
-import org.apache.pdfbox.pdmodel.font.PDType1Font;
-
+import java.util.ResourceBundle;
+import es.finalPrimerCurso.finalPrimerCurso.Clases.CrearEImprimirPDF;
 import es.finalPrimerCurso.finalPrimerCurso.Clases.Preguntas;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 
 public class PantallaFinalController {
 	@FXML
 	private Label textoFinal;
-	private int vecesDescargado = 0;
+	private static int vecesDescargado = 0;
+	
+	
+	
+
+	public static int getVecesDescargado() {
+		return vecesDescargado;
+	}
+	
+	public static void aumentarVecesDescargado() {
+		vecesDescargado++;
+	}
+
+
+	public void initialize(URL location, ResourceBundle resources) {
+        textoFinal.setText("");
+     
+    }
+    
+    private void avisoDescargaPDF(ActionEvent event) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText(null);
+        alert.setTitle("Información de descarga");
+        alert.setContentText("El archivo pdf se ha descargado correctamente en el escritorio");
+        alert.showAndWait();
+    }
+	
+	
 
 	// Event Listener on Button.onAction
-	@SuppressWarnings("exports")
 	@FXML
-	public void descargarPDF(ActionEvent event) {	
-		PDDocument pdfFinal = new PDDocument();
-		try {
-		PDPage paginaUno = new PDPage(PDRectangle.A4);
-		pdfFinal.addPage(paginaUno);
-		PDPageContentStream contenidoPDF = new PDPageContentStream(pdfFinal, paginaUno);
-		contenidoPDF.beginText();
-		contenidoPDF.setFont(PDType1Font.TIMES_BOLD, 32);
-		contenidoPDF.newLineAtOffset( 20, paginaUno.getMediaBox().getHeight() - 52);
-		contenidoPDF.showText("¡Hola jugador!");
-		contenidoPDF.endText();
-		contenidoPDF.close();
-		String rutaParaGuardarPDF = System.getProperty("user.home") + File.separator + "Desktop";
-		if(vecesDescargado == 0) {
-			pdfFinal.save(rutaParaGuardarPDF + File.separator + "preguntas.pdf");
-			vecesDescargado++;
-		}else {
-			pdfFinal.save(rutaParaGuardarPDF + File.separator + "preguntas"+"("+vecesDescargado+")"+".pdf");
-			vecesDescargado++;
-		}
-		}catch (IOException e) {
-			e.printStackTrace();
-		}finally {
-			 if (pdfFinal != null) {
-			        try {
-			            pdfFinal.close();
-			        }catch (IOException e) {
-			            e.printStackTrace();
-			        }
-			 }
-		}
+	public void descargarPDF(ActionEvent event) {
+		CrearEImprimirPDF preguntasPDF = new CrearEImprimirPDF();
+		avisoDescargaPDF(event);
 	}
 
 	// Event Listener on Button.onAction
@@ -67,8 +62,8 @@ public class PantallaFinalController {
 	@FXML
 	public void volverInicio(ActionEvent event) {
 		try {
-			PreguntasController.setAcierto(0);
-			PreguntasController.setIndex(0);
+			PreguntasController.restablecerAciertos();
+			PreguntasController.restablecerIndiceDePreguntas();
 			Collections.shuffle(Preguntas.getListaDePreguntas());
 			App.setRoot("seleccionCantidadPreguntas");
 		} catch (IOException e) {
