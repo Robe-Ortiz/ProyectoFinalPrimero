@@ -32,8 +32,8 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <Button mnemonicParsing="false" onAction="#descargarPDF" prefHeight="26.0" prefWidth="240.0" text="Descargar PDF  con las preguntas" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-      <Button mnemonicParsing="false" onAction="#verGrafico" prefHeight="26.0" prefWidth="240.0" text="Ver estadísticas de la aplicación" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+      <Button mnemonicParsing="false" onAction="#btnDescargarPDF" prefHeight="26.0" prefWidth="240.0" text="Descargar PDF  con las preguntas" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" onAction="#btnDescargarWord" prefHeight="26.0" prefWidth="240.0" text="Descargar Word con las preguntas" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
       <Button mnemonicParsing="false" onAction="#volverInicio" prefHeight="26.0" prefWidth="240.0" text="Volver al menú de Inicio" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />  
       <Button mnemonicParsing="false" onAction="#salirSimple" prefHeight="26.0" prefWidth="240.0" text="Salir" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
    </children>

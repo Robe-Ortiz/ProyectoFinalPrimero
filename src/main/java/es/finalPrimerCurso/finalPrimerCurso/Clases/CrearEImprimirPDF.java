@@ -105,14 +105,13 @@ public class CrearEImprimirPDF {
 
 			
 			String rutaParaGuardarPDF = System.getProperty("user.home") + File.separator + "Desktop";
-			if (PantallaFinalController.getVecesDescargado() == 0) {
-				System.out.println(alturaPrimeraPregunta);
+			if (PantallaFinalController.getVecesDescargadoPDF() == 0) {
 				pdfFinal.save(rutaParaGuardarPDF + File.separator + "preguntas.pdf");
-				PantallaFinalController.aumentarVecesDescargado();
+				PantallaFinalController.aumentarVecesDescargadoPDF();
 			} else {
 				pdfFinal.save(rutaParaGuardarPDF + File.separator + "preguntas" + "("
-						+ PantallaFinalController.getVecesDescargado() + ")" + ".pdf");
-				PantallaFinalController.aumentarVecesDescargado();
+						+ PantallaFinalController.getVecesDescargadoPDF() + ")" + ".pdf");
+				PantallaFinalController.aumentarVecesDescargadoPDF();
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

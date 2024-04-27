@@ -24,7 +24,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage escenarioCantidadPreguntas) throws IOException {
-        scene = new Scene(loadFXML("seleccionCantidadPreguntas"), 640, 480);
+        scene = new Scene(loadFXML("primeraEscena"), 640, 480);
         escenarioCantidadPreguntas.setTitle("Seleccion del número de preguntas");
         escenarioCantidadPreguntas.setScene(scene);
         escenarioCantidadPreguntas.show();
