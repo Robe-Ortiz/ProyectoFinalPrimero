@@ -70,7 +70,7 @@ public class PantallaFinalController {
 	@FXML
 	public void volverInicio(ActionEvent event) {
 		try {
-			PreguntasController.restablecerAciertos();
+			PreguntasController.restablecerErrores();
 			PreguntasController.restablecerIndiceDePreguntas();
 			Collections.shuffle(Preguntas.getListaDePreguntas());
 			App.setRoot("seleccionCantidadPreguntas");
