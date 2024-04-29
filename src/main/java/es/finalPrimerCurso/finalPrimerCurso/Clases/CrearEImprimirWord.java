@@ -64,8 +64,6 @@ public class CrearEImprimirWord {
         } catch (Exception e) {
             System.out.println("Error al generar el documento de Word: " + e.getMessage());
             e.printStackTrace();
-        }finally {
-		
-		}
+        }
     }
 }

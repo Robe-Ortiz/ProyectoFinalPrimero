@@ -62,6 +62,13 @@ public class PantallaFinalController {
         alert.showAndWait();
     }
 	
+    private void avisoDescargaWord(ActionEvent event) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText(null);
+        alert.setTitle("Información de descarga");
+        alert.setContentText("El archivo word se ha descargado correctamente en el escritorio");
+        alert.showAndWait();
+    }
 	
 
 	// Event Listener on Button.onAction
@@ -75,6 +82,7 @@ public class PantallaFinalController {
 	@FXML
 	public void btnDescargarWord(ActionEvent event) {	
 		CrearEImprimirWord preguntasWord = new CrearEImprimirWord();
+		avisoDescargaWord(event);
 			
 	}
 
