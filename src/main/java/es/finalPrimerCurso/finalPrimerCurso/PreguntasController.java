@@ -3,6 +3,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import java.io.IOException;
 import java.net.URL;
+import java.security.KeyStore.Entry;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.ResourceBundle;
 import es.finalPrimerCurso.finalPrimerCurso.Clases.Preguntas;
 import javafx.event.ActionEvent;
@@ -15,6 +18,7 @@ public class PreguntasController implements Initializable{
 	
 	private static int errores = 0;
 	private static int index = 0;
+	private static Map<Integer,Integer> preguntaError = new HashMap<>();
 
 	
 	
@@ -31,19 +35,23 @@ public class PreguntasController implements Initializable{
 	
 	
 	
-	
-	
-    public static int getErrores() {
+
+	public static Map<Integer, Integer> getPreguntaError() {
+		Map<Integer,Integer> preguntaErrorEspejo = preguntaError;
+		
+		return preguntaErrorEspejo;
+	}
+
+	public static int getErrores() {
 		return errores;
 	}
 
-	public static void restablecerErrores() {
+	public static void restablecerPartida() {
 		errores = 0;
-	}
-
-	public static void restablecerIndiceDePreguntas() {
 		index = 0;
+		preguntaError.clear();
 	}
+	
 
 	public void initialize(URL location, ResourceBundle resources) {
         pregunta.setText(Preguntas.getListaDePreguntas().get(index).getPregunta());
@@ -52,6 +60,22 @@ public class PreguntasController implements Initializable{
         respuesta3.setText(Preguntas.getListaDePreguntas().get(index).getConjuntoDeRespuestas().get(2));
         respuesta4.setText(Preguntas.getListaDePreguntas().get(index).getConjuntoDeRespuestas().get(3));       
     }
+    
+  
+    private void mensajeRespuestaIncorrecta(ActionEvent event) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText(null);
+        alert.setTitle("Respuesta incorrecta");
+        alert.setContentText(String.format("Respuesta incorrecta, vuelve a intentarlo."));
+        alert.showAndWait();
+    }
+    
+    private void respuestaIncorrecta(ActionEvent event) {
+		mensajeRespuestaIncorrecta(event);
+		preguntaError.put(index,preguntaError.getOrDefault(index, 0)+1);
+		errores++;
+    }
+  
     
     private void mensajeResultado(ActionEvent event) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -62,14 +86,15 @@ public class PreguntasController implements Initializable{
         		);
         alert.showAndWait();
     }
-  
+      
     private void avanzar() {
     	Preguntas.setCantidadDePreguntas(Preguntas.getCantidadDePreguntas()-1);
     	
 		 if(Preguntas.getCantidadDePreguntas() == 0) {
 			 try {
 				 mensajeResultado(null);
-				 System.out.printf("Has acertado %d/%d\n",errores,Preguntas.getCantidadDePreguntasOriginal());
+				 preguntaError.forEach((indice,valor) -> System.out.printf("Pregunta: %d  errores: %d\n",indice+1,valor));
+				 
 				 App.setRoot("pantallaFinal");
 			 }catch (IOException e) {
 				e.printStackTrace();
@@ -84,21 +109,14 @@ public class PreguntasController implements Initializable{
 		 }
 	}
     
-    private void mensajeRespuestaIncorrecta(ActionEvent event) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setHeaderText(null);
-        alert.setTitle("Respuesta incorrecta");
-        alert.setContentText(String.format("Respuesta incorrecta, vuelve a intentarlo."));
-        alert.showAndWait();
-    }
+
         
 	@FXML
 	public void btnRespuesta1(ActionEvent event){
 		if(respuesta1.getText().equals(Preguntas.getListaDePreguntas().get(index).getRespuestaCorrecta())){
 			avanzar();	
 		}else {
-			mensajeRespuestaIncorrecta(event);
-			errores++;
+			respuestaIncorrecta(event);
 		}
 	}
 
@@ -108,8 +126,7 @@ public class PreguntasController implements Initializable{
 		if(respuesta2.getText().equals(Preguntas.getListaDePreguntas().get(index).getRespuestaCorrecta())){
 			avanzar();
 		}else {
-			mensajeRespuestaIncorrecta(event);
-			errores++;
+			respuestaIncorrecta(event);
 		}		
 	}
 
@@ -118,8 +135,7 @@ public class PreguntasController implements Initializable{
 		if(respuesta3.getText().equals(Preguntas.getListaDePreguntas().get(index).getRespuestaCorrecta())){
 			avanzar();
 		}else {
-			mensajeRespuestaIncorrecta(event);
-			errores++;
+			respuestaIncorrecta(event);
 		}		
 	}
 
@@ -128,8 +144,7 @@ public class PreguntasController implements Initializable{
 		if(respuesta4.getText().equals(Preguntas.getListaDePreguntas().get(index).getRespuestaCorrecta())){
 			avanzar();
 		}else {
-			mensajeRespuestaIncorrecta(event);
-			errores++;
+			respuestaIncorrecta(event);
 		}		
 	}
 }

@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Collections;
 import java.util.ResourceBundle;
+
+import javax.swing.SwingUtilities;
+
+import es.finalPrimerCurso.finalPrimerCurso.Clases.CreaEImprimeGrafica;
 import es.finalPrimerCurso.finalPrimerCurso.Clases.CrearEImprimirPDF;
 import es.finalPrimerCurso.finalPrimerCurso.Clases.CrearEImprimirWord;
 import es.finalPrimerCurso.finalPrimerCurso.Clases.Preguntas;
@@ -41,6 +45,14 @@ public class PantallaFinalController {
         textoFinal.setText("");
      
     }
+	
+   @FXML
+    void btnGrafica(ActionEvent event) {
+       SwingUtilities.invokeLater(() -> {
+           CreaEImprimeGrafica example = new CreaEImprimeGrafica();
+           example.setVisible(true);
+           });
+    }
     
     private void avisoDescargaPDF(ActionEvent event) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -70,8 +82,7 @@ public class PantallaFinalController {
 	@FXML
 	public void volverInicio(ActionEvent event) {
 		try {
-			PreguntasController.restablecerErrores();
-			PreguntasController.restablecerIndiceDePreguntas();
+			PreguntasController.restablecerPartida();
 			Collections.shuffle(Preguntas.getListaDePreguntas());
 			App.setRoot("seleccionCantidadPreguntas");
 		} catch (IOException e) {

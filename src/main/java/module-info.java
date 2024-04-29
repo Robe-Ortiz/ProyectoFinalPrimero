@@ -4,6 +4,8 @@ module es.finalPrimerCurso.finalPrimerCurso {
 	requires org.apache.pdfbox;
 	requires java.base;
 	requires poi.ooxml;
+	requires java.desktop;
+	requires jfreechart;
 
     opens es.finalPrimerCurso.finalPrimerCurso to javafx.fxml;
     exports es.finalPrimerCurso.finalPrimerCurso;

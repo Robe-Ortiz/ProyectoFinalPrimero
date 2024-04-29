@@ -11,6 +11,8 @@
 		<maven.compiler.target>11</maven.compiler.target>
 	</properties>
 	<dependencies>
+		
+		<!-- JavaFX -->
 		<dependency>
 			<groupId>org.openjfx</groupId>
 			<artifactId>javafx-controls</artifactId>
@@ -22,26 +24,24 @@
 			<version>21</version>
 		</dependency>
 
-		<!-- APACHE PDF -->
+		<!-- Apache PDF -->
 		<dependency>
 			<groupId>org.apache.pdfbox</groupId>
 			<artifactId>pdfbox</artifactId>
 			<version>3.0.2</version>
 		</dependency>
-
 		<dependency>
 			<groupId>commons-logging</groupId>
 			<artifactId>commons-logging</artifactId>
 			<version>1.3.1</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.apache.pdfbox</groupId>
 			<artifactId>pdfbox</artifactId>
 			<version>2.0.31</version>
 		</dependency>
 		
-		<!-- APACHE POI WORD -->
+		<!-- Apache POI WORD -->
 	    <dependency>
 	        <groupId>org.apache.poi</groupId>
 	        <artifactId>poi</artifactId>
@@ -52,8 +52,14 @@
 	        <artifactId>poi-ooxml</artifactId>
 	        <version>4.1.1</version>
 	    </dependency>
-		
-	
+	    
+		<!-- JFReeChart -->
+		<dependency>
+    		<groupId>org.jfree</groupId>
+    		<artifactId>jfreechart</artifactId>
+   		 	<version>1.0.19</version>
+		</dependency>
+
 
 
 	</dependencies>

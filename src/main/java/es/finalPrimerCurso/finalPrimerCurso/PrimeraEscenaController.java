@@ -2,6 +2,7 @@ package es.finalPrimerCurso.finalPrimerCurso;
 
 import java.io.IOException;
 
+import es.finalPrimerCurso.finalPrimerCurso.Clases.CreaEImprimeGrafica;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -42,7 +43,7 @@ public class PrimeraEscenaController {
 		default:
 			mostrarErrorSalir3(event);
     	System.exit(0);
-		}
+		}    	
     }
     
     @FXML
