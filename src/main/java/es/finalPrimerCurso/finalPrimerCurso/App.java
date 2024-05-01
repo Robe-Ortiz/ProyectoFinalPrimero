@@ -14,11 +14,6 @@ import es.finalPrimerCurso.finalPrimerCurso.Clases.Preguntas;
  * JavaFX App
  */
 public class App extends Application {
-	
-
-	
-	
-	
 
     private static Scene scene;
 

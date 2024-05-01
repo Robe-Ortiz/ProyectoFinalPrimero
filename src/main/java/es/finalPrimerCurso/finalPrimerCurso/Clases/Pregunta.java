@@ -41,6 +41,10 @@ public class Pregunta {
 		return pregunta;
 	}
 
+	public int getNumeroPregunta() {
+		return numeroPregunta;
+	}
+
 	public String getRespuestaCorrecta() {
 		return respuestaCorrecta;
 	}

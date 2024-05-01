@@ -5,7 +5,8 @@ module es.finalPrimerCurso.finalPrimerCurso {
 	requires java.base;
 	requires poi.ooxml;
 	requires java.desktop;
-	requires jfreechart;
+	requires org.jfree.jfreechart;
+
 
     opens es.finalPrimerCurso.finalPrimerCurso to javafx.fxml;
     exports es.finalPrimerCurso.finalPrimerCurso;
