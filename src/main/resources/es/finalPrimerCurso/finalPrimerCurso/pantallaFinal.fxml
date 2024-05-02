@@ -39,6 +39,10 @@
 				<Font size="50.0" />
 			</font>
 		</Label>
+		<Button mnemonicParsing="false" onAction="#btnGrafica" prefHeight="54.0"
+			prefWidth="500.0" stylesheets="@estilos.css"
+			text="Ver gráfica de errores" GridPane.columnIndex="1"
+			GridPane.halignment="CENTER" GridPane.rowIndex="3" />
 		<Button mnemonicParsing="false" onAction="#btnDescargarPDF"
 			prefHeight="26.0" prefWidth="500.0" stylesheets="@estilos.css"
 			text="Descargar PDF  con las preguntas" GridPane.columnIndex="1"
@@ -49,15 +53,12 @@
 			GridPane.halignment="CENTER" GridPane.rowIndex="7" />
 		<Button mnemonicParsing="false" onAction="#volverInicio"
 			prefHeight="26.0" prefWidth="500.0" stylesheets="@estilos.css"
-			text="Volver al menú de Inicio" GridPane.columnIndex="1"
+			text="Volver a jugar" GridPane.columnIndex="1"
 			GridPane.halignment="CENTER" GridPane.rowIndex="9" />
 		<Button mnemonicParsing="false" onAction="#salirSimple"
 			prefHeight="26.0" prefWidth="500.0" stylesheets="@estilos.css"
 			text="Salir" GridPane.columnIndex="1" GridPane.halignment="CENTER"
 			GridPane.rowIndex="11" />
-		<Button mnemonicParsing="false" onAction="#btnGrafica" prefHeight="54.0"
-			prefWidth="500.0" stylesheets="@estilos.css"
-			text="Ver gráfica de errores" GridPane.columnIndex="1"
-			GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+		
 	</children>
 </GridPane>

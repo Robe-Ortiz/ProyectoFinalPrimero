@@ -4,6 +4,7 @@ import javafx.fxml.Initializable;
 import java.io.IOException;
 import java.net.URL;
 import java.security.KeyStore.Entry;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -147,4 +148,14 @@ public class PreguntasController implements Initializable{
 			respuestaIncorrecta(event);
 		}		
 	}
+    @FXML
+    void btnReset(ActionEvent event) {
+		try {
+			PreguntasController.restablecerPartida();
+			Collections.shuffle(Preguntas.getListaDePreguntas());
+			App.setRoot("seleccionCantidadPreguntas");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    }
 }

@@ -8,6 +8,8 @@ module es.finalPrimerCurso.finalPrimerCurso {
 	requires org.jfree.jfreechart;
 
 
+
+
     opens es.finalPrimerCurso.finalPrimerCurso to javafx.fxml;
     exports es.finalPrimerCurso.finalPrimerCurso;
 }

@@ -36,7 +36,6 @@ public class App extends Application {
 
     public static void main(String[] args) {
     	Preguntas preguntas = new Preguntas();
-    	System.out.println(preguntas.getListaDePreguntas().size());
     	int cantidadPreguntas;
         launch();
     }
