@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 import es.finalPrimerCurso.finalPrimerCurso.Clases.Preguntas;
+import es.finalPrimerCurso.finalPrimerCurso.Clases.Usuarios;
 
 /**
  * JavaFX App
@@ -35,7 +36,8 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-    	Preguntas preguntas = new Preguntas();
+    	Usuarios usuarios = new Usuarios();
+    	Preguntas preguntas = new Preguntas();    	
     	int cantidadPreguntas;
         launch();
     }

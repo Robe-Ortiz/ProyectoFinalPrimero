@@ -1,21 +1,38 @@
 package es.finalPrimerCurso.finalPrimerCurso;
 
 import java.io.IOException;
+import java.util.Optional;
 
 import es.finalPrimerCurso.finalPrimerCurso.Clases.CreaEImprimeGrafica;
+import es.finalPrimerCurso.finalPrimerCurso.Clases.Usuario;
+import es.finalPrimerCurso.finalPrimerCurso.Clases.Usuarios;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 public class PrimeraEscenaController {
 
     @FXML
-    private TextArea nombreUsuario;
+    private TextField nombreUsuario;
+
+    @FXML
+    private PasswordField password;
     private int salir = 0;
     
+    private void comprobarUsuario(String nombreUsuario) {
+    Optional<Usuario> opUsuario =	Usuarios.getListaUsuarios().stream()
+			    											.filter(u->u.getNombreUsuario().equals(nombreUsuario))
+			    											.findFirst();
+    if(opUsuario.isEmpty()) System.out.println("Error usuario");
+    
+    }
+    
+    
     @FXML
-    void btnContinuar(ActionEvent event) throws IOException {
+    private void btnContinuar(ActionEvent event) throws IOException {
     	System.out.println(nombreUsuario.getText());
     	mensajeContinuar(event);
     	App.setRoot("SeleccionCantidadPreguntas");
