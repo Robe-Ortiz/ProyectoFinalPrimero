@@ -131,7 +131,7 @@ public class Preguntas {
 			listaDePreguntas.add(new Pregunta("¿Lesoto?", "Maseru", "Mbabane", "Lobamba", "Manzini"));
 			listaDePreguntas.add(new Pregunta("¿Liberia?", "Monrovia", "Freetown", "Conakry", "Banjul"));
 			listaDePreguntas.add(new Pregunta("¿Libia?", "Trípoli", "El Cairo", "Argel", "Jartum"));
-			listaDePreguntas.add(new Pregunta("¿Madagascar?", "Antananarivo", "Maputo", "Antananarivo", "Moroni"));
+			listaDePreguntas.add(new Pregunta("¿Madagascar?", "Antananarivo", "Maputo", "Antanamarivo", "Moroni"));
 			listaDePreguntas.add(new Pregunta("¿Malaui?", "Lilongüe", "Lusaka", "Harare", "Gaborone"));
 			listaDePreguntas.add(new Pregunta("¿Mali?", "Bamako", "Níger", "N'Djamena", "Burkina Faso"));
 			listaDePreguntas.add(new Pregunta("¿Mauritania?", "Nuakchot", "Bamako", "Nuacchiot", "Rabat"));
@@ -227,6 +227,7 @@ public class Preguntas {
 			listaDePreguntas.add(new Pregunta("¿Vietnam?", "Hanói", "Ciudad de Ho Chi Minh", "Nom Pen", "Bangkok"));
 			listaDePreguntas.add(new Pregunta("¿Yemen?", "Saná", "Mascate", "Doha", "Riad"));
 			listaDePreguntas.add(new Pregunta("¿Yibuti?", "Yibuti", "Hargeisa", "Mogadiscio", "Asmara"));
+			
 		}
 			Collections.shuffle(listaDePreguntas);
 	}

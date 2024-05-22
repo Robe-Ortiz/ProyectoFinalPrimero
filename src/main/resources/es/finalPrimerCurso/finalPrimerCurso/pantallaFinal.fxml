@@ -33,7 +33,7 @@
 	<children>
 		<Label alignment="CENTER" contentDisplay="CENTER" prefHeight="86.0" prefWidth="600.0" text="¡ GRACIAS POR JUGAR !" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
 			<font>
-				<Font size="50.0" />
+				<Font name="Lucida Sans Demibold Italic" size="50.0" />
 			</font>
 		</Label>
 		<Button mnemonicParsing="false" onAction="#btnGrafica" prefHeight="54.0" prefWidth="500.0" stylesheets="@estilos.css" text="Ver gráfica de errores" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />

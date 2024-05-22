@@ -32,7 +32,7 @@
 	<children>
 		<Label fx:id="pregunta" alignment="CENTER" contentDisplay="CENTER" prefHeight="86.0" prefWidth="600.0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
 			<font>
-				<Font size="36.0" />
+				<Font name="Lucida Sans Demibold Italic" size="36.0" />
 			</font>
 		</Label>
 		<Button mnemonicParsing="false" onAction="#btnRespuesta1" prefHeight="25.0" prefWidth="120.0" stylesheets="@estilos.css" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
