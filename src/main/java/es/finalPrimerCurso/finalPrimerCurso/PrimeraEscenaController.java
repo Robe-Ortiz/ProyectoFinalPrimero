@@ -3,46 +3,60 @@ package es.finalPrimerCurso.finalPrimerCurso;
 import java.io.IOException;
 import java.util.Optional;
 
-import es.finalPrimerCurso.finalPrimerCurso.Clases.CreaEImprimeGrafica;
 import es.finalPrimerCurso.finalPrimerCurso.Clases.Usuario;
 import es.finalPrimerCurso.finalPrimerCurso.Clases.Usuarios;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 public class PrimeraEscenaController {
 
     @FXML
     private TextField nombreUsuario;
-
     @FXML
     private PasswordField password;
     private int salir = 0;
     
-    private void comprobarUsuario(String nombreUsuario) {
+    private  boolean comprobarUsuario(ActionEvent event ,String nombreUsuario) {
     Optional<Usuario> opUsuario =	Usuarios.getListaUsuarios().stream()
 			    											.filter(u->u.getNombreUsuario().equals(nombreUsuario))
 			    											.findFirst();
-    if(opUsuario.isEmpty()) System.out.println("Error usuario");
-    
+    if(opUsuario.isEmpty()) {
+    	mostrarUsuarioNoEncontrado(event);
+    	return false;
+    }else {
+    	System.out.println("usuario " + nombreUsuario + " ha sido encontrado.");
+       	if(opUsuario.get().getPassword().equals(password.getText())) {
+       		return true;
+       	}else {
+			mostrarpasswordIncorrecta(event);
+       		return false;
+       	}
+    }     
     }
+    
+
     
     
     @FXML
     private void btnContinuar(ActionEvent event) throws IOException {
-    	System.out.println(nombreUsuario.getText());
-    	mensajeContinuar(event);
-    	App.setRoot("SeleccionCantidadPreguntas");
+    	if(comprobarUsuario(event, nombreUsuario.getText())) {
+	    	System.out.println(nombreUsuario.getText());
+	    	mensajeContinuar(event,nombreUsuario.getText());
+	    	App.setRoot("SeleccionCantidadPreguntas");
+    	}
     }
     
-    private void mensajeContinuar(ActionEvent event) {
+    private void mensajeContinuar(ActionEvent event, String nombreUsuario) {
+    	String nombreCompleto = Usuarios.getListaUsuarios().stream()
+    						.filter(u->u.getNombreUsuario().equals(nombreUsuario)).map(Usuario::getNombreCompleto).findFirst().orElse("Usuario no encontrado");
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setHeaderText(null);
         alert.setTitle("Bienvenido");
-        alert.setContentText(String.format("Bienvenido a nuestro juego %s", nombreUsuario.getText()==""?"jugador anónimo":nombreUsuario.getText()));
+        
+        alert.setContentText(String.format("Bienvenido a nuestro juego %s", nombreCompleto ));
         alert.showAndWait();
     }
 
@@ -89,6 +103,21 @@ public class PrimeraEscenaController {
         alert.showAndWait();
     }
 
+    @FXML
+    private void mostrarUsuarioNoEncontrado(ActionEvent event) {
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setHeaderText(null);
+        alert.setTitle("Usuario no encontrado.");
+        alert.setContentText("El nombre " + nombreUsuario.getText() + " de usuario no se ha encontrado");
+        alert.showAndWait();
+    }
 
-
+    @FXML
+    private void mostrarpasswordIncorrecta(ActionEvent event) {
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setHeaderText(null);
+        alert.setTitle("Contraseña incorrecta.");
+        alert.setContentText("La contraseña no es correcta");
+        alert.showAndWait();
+    }
 }

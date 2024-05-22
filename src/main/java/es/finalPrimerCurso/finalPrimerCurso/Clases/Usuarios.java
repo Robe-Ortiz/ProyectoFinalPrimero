@@ -10,6 +10,9 @@ public class Usuarios {
 	
 	public Usuarios() {
 		listaUsuarios.add(new Usuario("robe","Roberto Ortiz","1234"));
+		listaUsuarios.add(new Usuario("fabio","Fabio Reséndiz","fabio123"));
+		listaUsuarios.add(new Usuario("pedro","Pedro Boceta","cangetin01"));
+		listaUsuarios.add(new Usuario("programadornº1","Pedro Recio","kiosko24"));
 	}
 
 

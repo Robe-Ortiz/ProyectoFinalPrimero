@@ -1,4 +1,4 @@
-#titulo { -fx-font-family: "Hervetica"; 
+#titulo { -fx-font-family: "Lucida Sans"; 
     -fx-font-style: italic;
     -fx-font-size: 36px;
     -fx-text-fill: #FFFFFF;
@@ -23,7 +23,7 @@ Button { -fx-background-color: #008287;
 }
 
 Button:hover { -fx-background-color: #333333;
-          -fx-font-size: 22px;
+          
 }
 
 Button:pressed { -fx-background-color: #FFFFFF;

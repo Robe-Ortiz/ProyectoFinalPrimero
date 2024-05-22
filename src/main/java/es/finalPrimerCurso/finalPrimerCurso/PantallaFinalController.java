@@ -97,6 +97,20 @@ public class PantallaFinalController {
 			e.printStackTrace();
 		}
 	}
+	
+
+    @FXML
+    void btnCerrarSesion(ActionEvent event) {
+		try {
+			PreguntasController.restablecerPartida();
+			Collections.shuffle(Preguntas.getListaDePreguntas());
+			App.setRoot("primeraEscena");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    }
+	
+	
 
 	// Event Listener on Button.onAction
 	@FXML

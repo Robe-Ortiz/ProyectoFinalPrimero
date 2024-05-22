@@ -38,7 +38,6 @@ public class App extends Application {
     public static void main(String[] args) {
     	Usuarios usuarios = new Usuarios();
     	Preguntas preguntas = new Preguntas();    	
-    	int cantidadPreguntas;
         launch();
     }
 
