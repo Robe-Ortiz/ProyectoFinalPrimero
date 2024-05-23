@@ -1,15 +1,15 @@
 #titulo { -fx-font-family: "Lucida Sans"; 
     -fx-font-style: italic;
     -fx-font-size: 36px;
-    -fx-text-fill: #FFFFFF;
+    -fx-text-fill: #000000;
 }
 
 #fondo { -fx-background-color: #000000; }
 
-Button { -fx-background-color: #008287;
-    -fx-border-color: #FFFFFF;
-    -fx-border-width: 2;
-    -fx-text-fill: #FFFFFF;
+Button { -fx-background-color: #ffffff;
+    -fx-border-color: #000000;
+    -fx-border-width: 0;
+    -fx-text-fill: #000000;
     -fx-font-family: "Lucida Sans";
     -fx-font-style: italic;
     -fx-font-size: 28px;
@@ -22,11 +22,23 @@ Button { -fx-background-color: #008287;
     -fx-font-size: 12px;
 }
 
-Button:hover { -fx-background-color: #333333;
-          
+Button:hover { 
+	-fx-background-color: #d6dbdf;
+    -fx-border-width: 1;
+    -fx-border-color: #ffffff;
 }
 
-Button:pressed { -fx-background-color: #FFFFFF;
--fx-text-fill: #000000;
--fx-font-weight: bold;
+.preguntas{
+    -fx-background-image: url('mapamundi.jpg');
+    -fx-background-color: transparent;
+    -fx-background-size: cover; 
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}
+.primeraEscena{
+	-fx-background-image: url('core_logo.png');
+    -fx-background-size: 15% 15%; 
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center 90%;
+	
 }
