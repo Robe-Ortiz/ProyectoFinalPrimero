@@ -81,7 +81,7 @@ public class PrimeraEscenaController {
     private void mostrarErrorSalir1(ActionEvent event) {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setHeaderText(null);
-        alert.setTitle("1/3");
+        alert.setTitle("Primer aviso");
         alert.setContentText("Supongo que has clickeado por error, no te preocupes que te dejo dentro.");
         alert.showAndWait();
     }
@@ -89,7 +89,7 @@ public class PrimeraEscenaController {
     private void mostrarErrorSalir2(ActionEvent event) {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setHeaderText(null);
-        alert.setTitle("2/3");
+        alert.setTitle("Último aviso");
         alert.setContentText("Empiezo a pensar que no te has equivocado y que quieres salir.");
         alert.showAndWait();
     }

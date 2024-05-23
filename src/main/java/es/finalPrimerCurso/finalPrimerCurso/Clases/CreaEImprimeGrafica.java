@@ -18,13 +18,13 @@ public class CreaEImprimeGrafica extends JFrame {
 		super("Gráfico de barras");
 		
 		DefaultCategoryDataset datos = new DefaultCategoryDataset();
-		for(int i = 0; i<Preguntas.getCantidadDePreguntasOriginal() ;i++) {		
-			datos.addValue(PreguntasController.getPreguntaError().get(indicePregunta), "Errores", "Pregunta "+(indicePregunta+1));
+		for(int i = 0; i<PreguntasController.getPreguntasContestadas()+1 ;i++) {		
+			datos.addValue(PreguntasController.getPreguntaError().get(indicePregunta), "Errores", ""+(indicePregunta+1));
 			indicePregunta++;
 		}
 		JFreeChart grafico = ChartFactory.createBarChart("Gráfica errores","Preguntas","Errores",datos);
 		getBackground();
-		grafico.getCategoryPlot().getRenderer().setSeriesPaint(0, Color.GREEN);
+		grafico.getCategoryPlot().getRenderer().setSeriesPaint(0, Color.CYAN);
 		grafico.getCategoryPlot().getRangeAxis().setStandardTickUnits(org.jfree.chart.axis.NumberAxis.createIntegerTickUnits());
 		
 		ChartPanel ventana = new ChartPanel(grafico);

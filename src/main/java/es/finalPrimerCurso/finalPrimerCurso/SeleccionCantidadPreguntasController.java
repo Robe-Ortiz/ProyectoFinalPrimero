@@ -20,19 +20,27 @@ public class SeleccionCantidadPreguntasController {
 
 	// Event Listener on Button.onAction
 	@FXML
-	public void btn3(ActionEvent event) {
+	public void facil(ActionEvent event) {
 		Preguntas.setCantidadDePreguntas(3);
 		Preguntas.setCantidadDePreguntasOriginal(3);
 		avanzar();
 	}
-	public void btn5(ActionEvent event) {
+	public void moderado(ActionEvent event) {
 		Preguntas.setCantidadDePreguntas(5);
 		Preguntas.setCantidadDePreguntasOriginal(5);
 		avanzar();
 	}
-	public void btn10(ActionEvent event) {
+	public void dificil(ActionEvent event) {
 		Preguntas.setCantidadDePreguntas(10);
 		Preguntas.setCantidadDePreguntasOriginal(10);
 		avanzar();
 	}
+	
+	public void extremo(ActionEvent event) {
+		Preguntas.setCantidadDePreguntas(Preguntas.getListaDePreguntas().size());
+		Preguntas.setCantidadDePreguntasOriginal(Preguntas.getListaDePreguntas().size());
+		PreguntasController.iniciarModoExtremo();
+		avanzar();
+	}
+	
 }

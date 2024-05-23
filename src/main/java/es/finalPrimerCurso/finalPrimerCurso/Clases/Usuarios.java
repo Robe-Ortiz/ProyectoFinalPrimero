@@ -14,6 +14,7 @@ public class Usuarios {
 		listaUsuarios.add(new Usuario("pedro","Pedro Boceta","cangetin01"));
 		listaUsuarios.add(new Usuario("programadornº1","Pedro Recio","kiosko24"));
 		listaUsuarios.add(new Usuario("pubito","Luis de Paz","040722"));
+		listaUsuarios.add(new Usuario("","Señor anónimo",""));
 	}
 
 

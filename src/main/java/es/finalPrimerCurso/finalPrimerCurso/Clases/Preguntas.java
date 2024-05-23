@@ -9,8 +9,7 @@ public class Preguntas {
 
 	private static List<Pregunta> listaDePreguntas = new ArrayList<>();
 	private static int cantidadDePreguntasOriginal = 0;
-	private static int cantidadDePreguntas = 0;
-	
+	private static int cantidadDePreguntas = 0;	
 	
 	public Preguntas() {
 		if(listaDePreguntas.isEmpty()) {

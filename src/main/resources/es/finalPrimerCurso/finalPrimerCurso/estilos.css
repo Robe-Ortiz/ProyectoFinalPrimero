@@ -1,12 +1,6 @@
-#titulo { -fx-font-family: "Lucida Sans"; 
-    -fx-font-style: italic;
-    -fx-font-size: 36px;
-    -fx-text-fill: #000000;
-}
 
-#fondo { -fx-background-color: #000000; }
-
-Button { -fx-background-color: #ffffff;
+Button { 
+	-fx-background-color: #ffffff;
     -fx-border-color: #000000;
     -fx-border-width: 0;
     -fx-text-fill: #000000;
@@ -17,15 +11,10 @@ Button { -fx-background-color: #ffffff;
     -fx-border-radius: 10 10 10 10;
 }
 
-#autor { -fx-font-family: "Lucida Sans";
-    -fx-text-fill: #FFFF00;
-    -fx-font-size: 12px;
-}
 
 Button:hover { 
-	-fx-background-color: #d6dbdf;
-    -fx-border-width: 1;
-    -fx-border-color: #ffffff;
+	-fx-background-color: #0277bd;
+
 }
 
 .preguntas{
@@ -35,10 +24,12 @@ Button:hover {
     -fx-background-repeat: no-repeat;
     -fx-background-position: center center;
 }
-.primeraEscena{
+.primeraEscena{	
 	-fx-background-image: url('core_logo.png');
     -fx-background-size: 15% 15%; 
     -fx-background-repeat: no-repeat;
     -fx-background-position: center 90%;
-	
 }
+
+
+
