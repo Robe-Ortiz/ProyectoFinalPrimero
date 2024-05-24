@@ -13,18 +13,18 @@ import org.jfree.data.category.DefaultCategoryDataset;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import es.finalPrimerCurso.finalPrimerCurso.PreguntasController;
+import es.finalPrimerCurso.finalPrimerCurso.PreguntasCapitalesController;
 import es.finalPrimerCurso.finalPrimerCurso.Clases.CreaEImprimeGrafica;
 
 public class CreaEImprimeGraficaTest {
 
     private CreaEImprimeGrafica creaEImprimeGrafica;
-    private PreguntasController preguntasController;
+    private PreguntasCapitalesController preguntasController;
     private Map<Integer,Integer> mapaDeErrores = new HashMap<>();
 
     @BeforeEach
     public void setUp() {
-        preguntasController = mock(PreguntasController.class);
+        preguntasController = mock(PreguntasCapitalesController.class);
         creaEImprimeGrafica = new CreaEImprimeGrafica();
         mapaDeErrores.put(1, 2);
         mapaDeErrores.put(2, 1);

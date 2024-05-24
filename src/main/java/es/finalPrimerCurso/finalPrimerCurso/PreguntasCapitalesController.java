@@ -14,7 +14,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-public class PreguntasController implements Initializable {
+public class PreguntasCapitalesController implements Initializable {
 
 	private static int preguntasContestadas = 0;
 	private static boolean modoExtremo;
@@ -93,7 +93,7 @@ public class PreguntasController implements Initializable {
 		mensajeRespuestaIncorrectaModoExtremo(event);
 		preguntaError.put(index, preguntaError.getOrDefault(index, 0) + 1);
 		try {
-			App.setRoot("pantallaFinal");
+			App.setRoot("pantallaFinalCapitales");
 		}catch (IOException e) {
 		}
 	}
@@ -113,7 +113,7 @@ public class PreguntasController implements Initializable {
 		if (Preguntas.getCantidadDePreguntas() == 0) {
 			try {
 				mensajeResultado(null);
-				App.setRoot("pantallaFinal");
+				App.setRoot("pantallaFinalCapitales");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -121,7 +121,7 @@ public class PreguntasController implements Initializable {
 			try {
 				index++;
 				preguntasContestadas++;
-				App.setRoot("preguntas");
+				App.setRoot("preguntasCapitales");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -175,9 +175,9 @@ public class PreguntasController implements Initializable {
 	@FXML
 	void btnReset(ActionEvent event) {
 		try {
-			PreguntasController.restablecerPartida();
+			PreguntasCapitalesController.restablecerPartida();
 			Collections.shuffle(Preguntas.getListaDePreguntas());
-			App.setRoot("seleccionCantidadPreguntas");
+			App.setRoot("seleccionCantidadPreguntasCapitales");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

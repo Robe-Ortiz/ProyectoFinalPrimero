@@ -5,7 +5,8 @@ import java.io.FileOutputStream;
 
 import org.apache.poi.xwpf.usermodel.*;
 
-import es.finalPrimerCurso.finalPrimerCurso.PantallaFinalController;
+import es.finalPrimerCurso.finalPrimerCurso.PantallaFinalCapitalesController;
+import es.finalPrimerCurso.finalPrimerCurso.PreguntasCapitalesController;
 
 public class CrearEImprimirWord {
 
@@ -17,7 +18,7 @@ public class CrearEImprimirWord {
 
 	
 	private void incluirPreguntasYRespuestas(XWPFDocument documento) {
-        for(int i = 0; i <Preguntas.getCantidadDePreguntasOriginal() ;i++) {
+        for(int i = 0; i <PreguntasCapitalesController.getPreguntasContestadas()+1 ;i++) {
         	agregarParrafo(documento, Preguntas.getListaDePreguntas().get(i).getPregunta());
         	agregarParrafo(documento, "A) "+Preguntas.getListaDePreguntas().get(i).getRespuestaCorrecta());
         	agregarParrafo(documento, "B) "+Preguntas.getListaDePreguntas().get(i).getRespuestaIncorrectaA());
@@ -45,13 +46,13 @@ public class CrearEImprimirWord {
 
 
             String rutaParaGuardarWord = System.getProperty("user.home") + File.separator + "Desktop";
-			if (PantallaFinalController.getVecesDescargadoWord() == 0) {
+			if (PantallaFinalCapitalesController.getVecesDescargadoWord() == 0) {
 				rutaParaGuardarWord += File.separator + "preguntas.docx";
-				PantallaFinalController.aumentarVecesDescargadoWord();
+				PantallaFinalCapitalesController.aumentarVecesDescargadoWord();
 			} else {				
 				rutaParaGuardarWord += File.separator + "preguntas" + "("
-						+ PantallaFinalController.getVecesDescargadoWord() + ")"+".docx";							
-				PantallaFinalController.aumentarVecesDescargadoWord();
+						+ PantallaFinalCapitalesController.getVecesDescargadoWord() + ")"+".docx";							
+				PantallaFinalCapitalesController.aumentarVecesDescargadoWord();
 			}
 			
             FileOutputStream out = new FileOutputStream(rutaParaGuardarWord);

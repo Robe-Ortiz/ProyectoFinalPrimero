@@ -20,21 +20,21 @@ public class PrimeraEscenaController {
     private int salir = 0;
     
     private  boolean comprobarUsuario(ActionEvent event ,String nombreUsuario) {
-    Optional<Usuario> opUsuario =	Usuarios.getListaUsuarios().stream()
-			    											.filter(u->u.getNombreUsuario().equals(nombreUsuario))
-			    											.findFirst();
-    if(opUsuario.isEmpty()) {
-    	mostrarUsuarioNoEncontrado(event);
-    	return false;
-    }else {
-    	System.out.println("usuario " + nombreUsuario + " ha sido encontrado.");
-       	if(opUsuario.get().getPassword().equals(password.getText())) {
-       		return true;
-       	}else {
-			mostrarpasswordIncorrecta(event);
-       		return false;
-       	}
-    }     
+	    Optional<Usuario> opUsuario =	Usuarios.getListaUsuarios().stream()
+				    											.filter(u->u.getNombreUsuario().equals(nombreUsuario))
+				    											.findFirst();
+	    if(opUsuario.isEmpty()) {
+	    	mostrarUsuarioNoEncontrado(event);
+	    	return false;
+	    }else {
+	    	System.out.println("usuario " + nombreUsuario + " ha sido encontrado.");
+	       	if(opUsuario.get().getPassword().equals(password.getText())) {
+	       		return true;
+	       	}else {
+				mostrarpasswordIncorrecta(event);
+	       		return false;
+	       	}
+	    }     
     }
     
 
@@ -45,7 +45,7 @@ public class PrimeraEscenaController {
     	if(comprobarUsuario(event, nombreUsuario.getText())) {
 	    	System.out.println(nombreUsuario.getText());
 	    	mensajeContinuar(event,nombreUsuario.getText());
-	    	App.setRoot("SeleccionCantidadPreguntas");
+	    	App.setRoot("SeleccionDeJuego");
     	}
     }
     

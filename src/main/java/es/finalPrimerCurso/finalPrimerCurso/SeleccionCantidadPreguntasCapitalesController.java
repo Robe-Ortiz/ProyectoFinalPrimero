@@ -8,11 +8,11 @@ import es.finalPrimerCurso.finalPrimerCurso.Clases.Preguntas;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 
-public class SeleccionCantidadPreguntasController {
+public class SeleccionCantidadPreguntasCapitalesController {
 
 	private void avanzar() {
 		try {
-			App.setRoot("preguntas");
+			App.setRoot("preguntasCapitales");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -39,7 +39,7 @@ public class SeleccionCantidadPreguntasController {
 	public void extremo(ActionEvent event) {
 		Preguntas.setCantidadDePreguntas(Preguntas.getListaDePreguntas().size());
 		Preguntas.setCantidadDePreguntasOriginal(Preguntas.getListaDePreguntas().size());
-		PreguntasController.iniciarModoExtremo();
+		PreguntasCapitalesController.iniciarModoExtremo();
 		avanzar();
 	}
 	

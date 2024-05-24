@@ -16,7 +16,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 
-public class PantallaFinalController {
+public class PantallaFinalCapitalesController {
 	@FXML
 	private Label textoFinal;
 	private static int vecesDescargadoPDF = 0;
@@ -90,9 +90,9 @@ public class PantallaFinalController {
 	@FXML
 	public void volverInicio(ActionEvent event) {
 		try {
-			PreguntasController.restablecerPartida();
+			PreguntasCapitalesController.restablecerPartida();
 			Collections.shuffle(Preguntas.getListaDePreguntas());
-			App.setRoot("seleccionCantidadPreguntas");
+			App.setRoot("seleccionCantidadPreguntasCapitales");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -102,9 +102,20 @@ public class PantallaFinalController {
     @FXML
     void btnCerrarSesion(ActionEvent event) {
 		try {
-			PreguntasController.restablecerPartida();
+			PreguntasCapitalesController.restablecerPartida();
 			Collections.shuffle(Preguntas.getListaDePreguntas());
 			App.setRoot("primeraEscena");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    }
+    
+    @FXML
+    void elegirJuego(ActionEvent event) {
+		try {
+			PreguntasCapitalesController.restablecerPartida();
+			Collections.shuffle(Preguntas.getListaDePreguntas());
+			App.setRoot("SeleccionDeJuego");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

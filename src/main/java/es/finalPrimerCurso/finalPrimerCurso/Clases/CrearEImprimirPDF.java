@@ -12,7 +12,8 @@ import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 import org.apache.pdfbox.text.PDFTextStripper;
 
-import es.finalPrimerCurso.finalPrimerCurso.PantallaFinalController;
+import es.finalPrimerCurso.finalPrimerCurso.PantallaFinalCapitalesController;
+import es.finalPrimerCurso.finalPrimerCurso.PreguntasCapitalesController;
 
 
 
@@ -23,7 +24,7 @@ public class CrearEImprimirPDF {
 
 	
 	private PDPageContentStream incluirPreguntasYRespuestas(PDDocument pdfFinal, PDPageContentStream contenidoPDF) throws IOException {
-		for (int i=0; i < Preguntas.getCantidadDePreguntasOriginal() ;i++ ) {	
+		for (int i=0; i < PreguntasCapitalesController.getPreguntasContestadas()+1 ;i++ ) {	
 			if(alturaPrimeraPregunta < 65.0) {
 				contenidoPDF.close();
 				PDPage paginaExtra = new PDPage(PDRectangle.A4);
@@ -105,13 +106,13 @@ public class CrearEImprimirPDF {
 
 			
 			String rutaParaGuardarPDF = System.getProperty("user.home") + File.separator + "Desktop";
-			if (PantallaFinalController.getVecesDescargadoPDF() == 0) {
+			if (PantallaFinalCapitalesController.getVecesDescargadoPDF() == 0) {
 				pdfFinal.save(rutaParaGuardarPDF + File.separator + "preguntas.pdf");
-				PantallaFinalController.aumentarVecesDescargadoPDF();
+				PantallaFinalCapitalesController.aumentarVecesDescargadoPDF();
 			} else {
 				pdfFinal.save(rutaParaGuardarPDF + File.separator + "preguntas" + "("
-						+ PantallaFinalController.getVecesDescargadoPDF() + ")" + ".pdf");
-				PantallaFinalController.aumentarVecesDescargadoPDF();
+						+ PantallaFinalCapitalesController.getVecesDescargadoPDF() + ")" + ".pdf");
+				PantallaFinalCapitalesController.aumentarVecesDescargadoPDF();
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

@@ -8,7 +8,7 @@ import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.data.category.DefaultCategoryDataset;
 
-import es.finalPrimerCurso.finalPrimerCurso.PreguntasController;
+import es.finalPrimerCurso.finalPrimerCurso.PreguntasCapitalesController;
 
 public class CreaEImprimeGrafica extends JFrame {
 	
@@ -18,8 +18,8 @@ public class CreaEImprimeGrafica extends JFrame {
 		super("Gráfico de barras");
 		
 		DefaultCategoryDataset datos = new DefaultCategoryDataset();
-		for(int i = 0; i<PreguntasController.getPreguntasContestadas()+1 ;i++) {		
-			datos.addValue(PreguntasController.getPreguntaError().get(indicePregunta), "Errores", ""+(indicePregunta+1));
+		for(int i = 0; i<PreguntasCapitalesController.getPreguntasContestadas()+1 ;i++) {		
+			datos.addValue(PreguntasCapitalesController.getPreguntaError().get(indicePregunta), "Errores", ""+(indicePregunta+1));
 			indicePregunta++;
 		}
 		JFreeChart grafico = ChartFactory.createBarChart("Gráfica errores","Preguntas","Errores",datos);
