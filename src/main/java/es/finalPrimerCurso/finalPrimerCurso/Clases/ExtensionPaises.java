@@ -6,8 +6,7 @@ import java.util.Map;
 public class ExtensionPaises {
 
 	private static Map <String,Double> mapaEuropa = new HashMap<>();
-	
-	
+	private static Map<String,Double> mapaAmerica = new HashMap<>();
 	
 	private void incluirEuropa(Map<String,Double> mapaParaLlenar) {
 		mapaParaLlenar.put("Rusia", 17.098);
@@ -58,14 +57,57 @@ public class ExtensionPaises {
 	}
 	
 	
+    private void incluirAmerica(Map<String, Double> mapaParaLlenar) {
+        mapaParaLlenar.put("Canadá", 9.984);
+        mapaParaLlenar.put("Estados Unidos", 9.631);
+        mapaParaLlenar.put("Brasil", 8.515);
+        mapaParaLlenar.put("Argentina", 2.780);
+        mapaParaLlenar.put("México", 1.964);
+        mapaParaLlenar.put("Perú", 1.285);
+        mapaParaLlenar.put("Colombia", 1.141);
+        mapaParaLlenar.put("Bolivia", 1.099);
+        mapaParaLlenar.put("Venezuela", 0.916);
+        mapaParaLlenar.put("Chile", 0.756);
+        mapaParaLlenar.put("Paraguay", 0.406);
+        mapaParaLlenar.put("Ecuador", 0.283);
+        mapaParaLlenar.put("Guyana", 0.215);
+        mapaParaLlenar.put("Uruguay", 0.176);
+        mapaParaLlenar.put("Surinam", 0.163);
+        mapaParaLlenar.put("Nicaragua", 0.130);
+        mapaParaLlenar.put("Cuba", 0.109);
+        mapaParaLlenar.put("Honduras", 0.112);
+        mapaParaLlenar.put("Guatemala", 0.109);
+        mapaParaLlenar.put("Panamá", 0.075);
+        mapaParaLlenar.put("Costa Rica", 0.051);
+        mapaParaLlenar.put("Puerto Rico", 0.009);
+        mapaParaLlenar.put("Belice", 0.022);
+        mapaParaLlenar.put("El Salvador", 0.021);
+        mapaParaLlenar.put("Jamaica", 0.011);
+        mapaParaLlenar.put("Trinidad y Tobago", 0.005);
+        mapaParaLlenar.put("Barbados", 0.00043);
+        mapaParaLlenar.put("San Vicente y las Granadinas", 0.00039);
+        mapaParaLlenar.put("Granada", 0.00034);
+        mapaParaLlenar.put("Antigua y Barbuda", 0.00044);
+        mapaParaLlenar.put("San Cristóbal y Nieves", 0.00026);
+        mapaParaLlenar.put("Dominica", 0.00075);
+        mapaParaLlenar.put("Santa Lucía", 0.00062);
+    }
+	
 	public ExtensionPaises() {
 		incluirEuropa(mapaEuropa);
+		incluirAmerica(mapaAmerica);
 	}
 
 
 	public static Map<String, Double> getMapaEuropa() {
 		return mapaEuropa;
 	}
+
+	public static Map<String, Double> getMapaAmerica() {
+		return mapaAmerica;
+	}
+	
+	
 	
 	
 }

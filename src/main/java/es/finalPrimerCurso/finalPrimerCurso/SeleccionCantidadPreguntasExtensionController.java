@@ -18,7 +18,7 @@ public class SeleccionCantidadPreguntasExtensionController {
     @FXML
     void america(ActionEvent event) {
     	PreguntasExtensionController.setCantidadDePreguntas(10);
-    	//PreguntasExtensionController.iniciarModoDeJuego("america");
+    	PreguntasExtensionController.setModoDeJuego("america");
     	avanzar();
     }
 

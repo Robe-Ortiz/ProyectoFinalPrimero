@@ -73,8 +73,9 @@ public class PreguntasExtensionController implements Initializable{
 		Alert alert = new Alert(Alert.AlertType.INFORMATION);
 		alert.setHeaderText(null);
 		alert.setTitle("Ups, parece que te has equivocado");
-		alert.setContentText(pais1.getText() + "tiene una extensión de : " + mapaDeLaPartida.get(pais1)+"millones de km²"
-				+ pais2.getText() + "tiene una extensión de : " + mapaDeLaPartida.get(pais2)+"millones de km²");
+		alert.setContentText(String.format("%s: %.4f millones de km²\n"
+										+ "%s: %.4f millones de km²", pais1.getText(), mapaDeLaPartida.get(pais1.getText()),
+										pais2.getText(),mapaDeLaPartida.get(pais2.getText())));
 		alert.showAndWait();
 	}
 
@@ -109,6 +110,7 @@ public class PreguntasExtensionController implements Initializable{
     
     private Map<String,Double> mapaParaJugar(){    	
     	if(modoDeJuego.equals("europa")) return ExtensionPaises.getMapaEuropa();
+    	if(modoDeJuego.equals("america")) return ExtensionPaises.getMapaAmerica();
     	
     	return null;
     }
@@ -116,14 +118,16 @@ public class PreguntasExtensionController implements Initializable{
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		
-		 List<String> clavesDelMapa = new ArrayList<>(mapaDeLaPartida.keySet());
+		List<String> clavesDelMapa = new ArrayList<>(mapaDeLaPartida.keySet());
 		
-			pais1.setText(clavesDelMapa.get(random.nextInt(clavesDelMapa.size())));
+		pais1.setText(clavesDelMapa.get(random.nextInt(clavesDelMapa.size())));
+		
+		do {
 			pais2.setText(clavesDelMapa.get(random.nextInt(clavesDelMapa.size())));
-			
-			while(pais1.equals(pais2)) {
-				pais2.setText(clavesDelMapa.get(random.nextInt(clavesDelMapa.size())));
-			}	
+		}while(pais1.getText().equals(pais2.getText()) || 
+				mapaDeLaPartida.get(pais1.getText()).equals(mapaDeLaPartida.get(pais2.getText())));
+		
+				
 	}
 
 }
