@@ -27,7 +27,6 @@ public class PrimeraEscenaController {
 	    	mostrarUsuarioNoEncontrado(event);
 	    	return false;
 	    }else {
-	    	System.out.println("usuario " + nombreUsuario + " ha sido encontrado.");
 	       	if(opUsuario.get().getPassword().equals(password.getText())) {
 	       		return true;
 	       	}else {
@@ -43,7 +42,6 @@ public class PrimeraEscenaController {
     @FXML
     private void btnContinuar(ActionEvent event) throws IOException {
     	if(comprobarUsuario(event, nombreUsuario.getText())) {
-	    	System.out.println(nombreUsuario.getText());
 	    	mensajeContinuar(event,nombreUsuario.getText());
 	    	App.setRoot("SeleccionDeJuego");
     	}

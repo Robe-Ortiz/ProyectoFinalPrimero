@@ -28,14 +28,14 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 	</rowConstraints>
 	<children>
-		<Label alignment="CENTER" contentDisplay="CENTER" prefHeight="86.0" prefWidth="600.0" text="Nivel de dificultad" textAlignment="CENTER" textFill="black" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+		<Label alignment="CENTER" contentDisplay="CENTER" prefHeight="86.0" prefWidth="600.0" text="Categorías" textAlignment="CENTER" textFill="black" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
 			<font>
 				<Font name="Lucida Sans Demibold Italic" size="50.0" />
 			</font>
 		</Label>
-		<Button mnemonicParsing="false" onAction="#facil" prefHeight="25.0" prefWidth="200.0" stylesheets="@estilos.css" text="Fácil" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-		<Button mnemonicParsing="false" onAction="#moderado" prefHeight="25.0" prefWidth="200.0" stylesheets="@estilos.css" text="Moderado" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-		<Button mnemonicParsing="false" onAction="#dificil" prefHeight="25.0" prefWidth="200.0" stylesheets="@estilos.css" text="Difícil" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+		<Button mnemonicParsing="false" onAction="#europa" prefHeight="25.0" prefWidth="200.0" stylesheets="@estilos.css" text="Europa" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+		<Button mnemonicParsing="false" onAction="#america" prefHeight="25.0" prefWidth="200.0" stylesheets="@estilos.css" text="América" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+		<Button mnemonicParsing="false" onAction="#mundo" prefHeight="25.0" prefWidth="200.0" stylesheets="@estilos.css" text="Mundo" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
       <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#extremo" prefHeight="25.0" prefWidth="200.0" stylesheets="@estilos.css" text="Extremo" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
 	</children>
 </GridPane>

@@ -6,17 +6,22 @@ import javafx.fxml.FXML;
 
 public class SeleccionDeJuegoController {
 
-    @FXML
-    void capitalesMundiales(ActionEvent event) {
+	
+	private void avanzar(String pantalla) {
     	try {
-			App.setRoot("SeleccionCantidadPreguntasCapitales");
+			App.setRoot(pantalla);
 		} catch (IOException e) {
 		}
+	}
+	
+    @FXML
+    void capitalesMundiales(ActionEvent event) {
+    	avanzar("SeleccionCantidadPreguntasCapitales");
     }
 
     @FXML
     void extensionPaises(ActionEvent event) {
-
+    	avanzar("SeleccionCantidadPreguntasExtension");
     }
 
 }

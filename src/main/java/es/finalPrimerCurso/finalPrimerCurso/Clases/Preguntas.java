@@ -62,7 +62,6 @@ public class Preguntas {
 			listaDePreguntas.add(new Pregunta("¿Turquía?", "Ankara", "Estambul", "Atenas", "Sofía"));
 			listaDePreguntas.add(new Pregunta("¿Ucrania?", "Kiev", "Moscú", "Varsovia", "Budapest"));
 			listaDePreguntas.add(new Pregunta("¿Vaticano?", "Ciudad del Vaticano", "Roma", "Florencia", "Nápoles"));
-			listaDePreguntas.add(new Pregunta("¿Yugoslavia?", "Belgrado", "Zagreb", "Sarajevo", "Podgorica"));
 			
 			//AMERICA
 			listaDePreguntas.add(new Pregunta("¿Antigua y Barbuda?", "Saint John's", "Bridgetown", "Castries", "Kingston"));
