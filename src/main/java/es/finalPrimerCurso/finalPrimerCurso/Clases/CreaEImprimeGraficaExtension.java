@@ -9,21 +9,20 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.data.category.DefaultCategoryDataset;
 
 import es.finalPrimerCurso.finalPrimerCurso.PreguntasCapitalesController;
+import es.finalPrimerCurso.finalPrimerCurso.PreguntasExtensionController;
 
-public class CreaEImprimeGrafica extends JFrame {
+public class CreaEImprimeGraficaExtension extends JFrame {
 	
 	private int indicePregunta = 0;
 
-	public CreaEImprimeGrafica() {
-		super("Gráfico de barras");
-		
+	public CreaEImprimeGraficaExtension() {
+		super("Gráfico de barras");		
 		DefaultCategoryDataset datos = new DefaultCategoryDataset();
-		for(int i = 0; i<PreguntasCapitalesController.getPreguntasContestadas()+1 ;i++) {		
-			datos.addValue(PreguntasCapitalesController.getPreguntaError().get(indicePregunta), "Errores", ""+(indicePregunta+1));
+		for(int i = 0; i<PreguntasExtensionController.getPreguntasContestadas();i++) {		
+			datos.addValue(PreguntasExtensionController.getPreguntaError().get(indicePregunta), "Errores", ""+(indicePregunta+1));
 			indicePregunta++;
 		}
 		JFreeChart grafico = ChartFactory.createBarChart("Gráfica errores","Preguntas","Errores",datos);
-		getBackground();
 		grafico.getCategoryPlot().getRenderer().setSeriesPaint(0, Color.CYAN);
 		grafico.getCategoryPlot().getRangeAxis().setStandardTickUnits(org.jfree.chart.axis.NumberAxis.createIntegerTickUnits());
 		

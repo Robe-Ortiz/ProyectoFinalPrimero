@@ -111,8 +111,8 @@ public class Preguntas {
 			listaDePreguntas.add(new Pregunta("¿Camerún?", "Yaundé", "Duala", "Libreville", "Brazzaville"));
 			listaDePreguntas.add(new Pregunta("¿Chad?", "Yamena", "Niamey", "Bangui", "Ndjamena"));
 			listaDePreguntas.add(new Pregunta("¿Comoras?", "Moroni", "Victoria", "Mamoudzou", "Dzaoudzi"));
-			listaDePreguntas.add(new Pregunta("¿República del Congo?", "Brazzaville", "Kinshasa", "Yaundé", "Bangui"));
-			listaDePreguntas.add(new Pregunta("¿República Democrática del Congo?", "Kinshasa", "Brazzaville", "Luanda", "Libreville"));
+			listaDePreguntas.add(new Pregunta("¿R. del Congo?", "Brazzaville", "Kinshasa", "Yaundé", "Bangui"));
+			listaDePreguntas.add(new Pregunta("¿R. Democrática del Congo?", "Kinshasa", "Brazzaville", "Luanda", "Libreville"));
 			listaDePreguntas.add(new Pregunta("¿Costa de Marfil?", "Yamoussoukro", "Abiyán", "Accra", "Lomé"));
 			listaDePreguntas.add(new Pregunta("¿Yibuti?", "Yibuti", "Hargeisa", "Mogadiscio", "Asmara"));
 			listaDePreguntas.add(new Pregunta("¿Egipto?", "El Cairo", "Alejandría", "Jartum", "Trípoli"));

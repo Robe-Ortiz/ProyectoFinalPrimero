@@ -34,8 +34,7 @@ public class PreguntasCapitalesController implements Initializable {
 	private Button respuesta4;
 
 	public static Map<Integer, Integer> getPreguntaError() {
-		Map<Integer, Integer> preguntaErrorEspejo = preguntaError;
-		return preguntaErrorEspejo;
+		return new HashMap<>(preguntaError);
 	}
 
 	public static int getErrores() {

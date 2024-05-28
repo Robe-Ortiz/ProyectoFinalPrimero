@@ -8,7 +8,7 @@ import java.util.ResourceBundle;
 
 import javax.swing.SwingUtilities;
 
-import es.finalPrimerCurso.finalPrimerCurso.Clases.CreaEImprimeGrafica;
+import es.finalPrimerCurso.finalPrimerCurso.Clases.CreaEImprimeGraficaCapitales;
 import es.finalPrimerCurso.finalPrimerCurso.Clases.CrearEImprimirPDF;
 import es.finalPrimerCurso.finalPrimerCurso.Clases.CrearEImprimirWord;
 import es.finalPrimerCurso.finalPrimerCurso.Clases.Preguntas;
@@ -49,7 +49,7 @@ public class PantallaFinalCapitalesController {
    @FXML
     void btnGrafica(ActionEvent event) {
        SwingUtilities.invokeLater(() -> {
-           CreaEImprimeGrafica example = new CreaEImprimeGrafica();
+           CreaEImprimeGraficaCapitales example = new CreaEImprimeGraficaCapitales();
            example.setVisible(true);
            });
     }

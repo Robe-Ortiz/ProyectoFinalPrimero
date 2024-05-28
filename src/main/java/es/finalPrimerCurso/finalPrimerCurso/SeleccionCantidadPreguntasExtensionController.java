@@ -2,6 +2,7 @@ package es.finalPrimerCurso.finalPrimerCurso;
 
 import java.io.IOException;
 
+import es.finalPrimerCurso.finalPrimerCurso.Clases.ExtensionPaises;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
@@ -32,13 +33,15 @@ public class SeleccionCantidadPreguntasExtensionController {
     @FXML
     void mundo(ActionEvent event) {
     	PreguntasExtensionController.setCantidadDePreguntas(10);
-    	//PreguntasExtensionController.iniciarModoDeJuego("mundo");
+    	PreguntasExtensionController.setModoDeJuego("mundo");
     	avanzar();
     }
 
     @FXML
     void extremo(ActionEvent event) {
-    	//PreguntasExtensionController.iniciarModoDeJuego("extremo");
+    	PreguntasExtensionController.setCantidadDePreguntas(ExtensionPaises.getMapaMundo().size());
+    	PreguntasExtensionController.setModoDeJuego("extremo");
+    	PreguntasExtensionController.iniciarModoExtremo();
     	avanzar();
     }
 

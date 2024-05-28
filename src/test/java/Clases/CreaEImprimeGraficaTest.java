@@ -14,18 +14,18 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import es.finalPrimerCurso.finalPrimerCurso.PreguntasCapitalesController;
-import es.finalPrimerCurso.finalPrimerCurso.Clases.CreaEImprimeGrafica;
+import es.finalPrimerCurso.finalPrimerCurso.Clases.CreaEImprimeGraficaCapitales;
 
 public class CreaEImprimeGraficaTest {
 
-    private CreaEImprimeGrafica creaEImprimeGrafica;
+    private CreaEImprimeGraficaCapitales creaEImprimeGrafica;
     private PreguntasCapitalesController preguntasController;
     private Map<Integer,Integer> mapaDeErrores = new HashMap<>();
 
     @BeforeEach
     public void setUp() {
         preguntasController = mock(PreguntasCapitalesController.class);
-        creaEImprimeGrafica = new CreaEImprimeGrafica();
+        creaEImprimeGrafica = new CreaEImprimeGraficaCapitales();
         mapaDeErrores.put(1, 2);
         mapaDeErrores.put(2, 1);
         mapaDeErrores.put(3, 1); 

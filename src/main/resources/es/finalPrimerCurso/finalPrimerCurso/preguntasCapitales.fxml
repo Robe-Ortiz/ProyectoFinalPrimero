@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane style="-fx-background-color: #626567" styleClass="preguntas" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.finalPrimerCurso.finalPrimerCurso.PreguntasCapitalesController">
+<GridPane style="-fx-background-color: #626567" styleClass="capitales" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.finalPrimerCurso.finalPrimerCurso.PreguntasCapitalesController">
 	<columnConstraints>
 		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
 		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
