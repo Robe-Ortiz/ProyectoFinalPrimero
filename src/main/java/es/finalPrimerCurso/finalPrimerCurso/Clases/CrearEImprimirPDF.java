@@ -35,35 +35,35 @@ public class CrearEImprimirPDF {
 			}
 				contenidoPDF.beginText();
 			    contenidoPDF.newLineAtOffset(40,alturaPrimeraPregunta);;
-			    contenidoPDF.showText(Preguntas.getListaDePreguntas().get(i).getPregunta());
+			    contenidoPDF.showText(Capitales.getListaDePreguntas().get(i).getPregunta());
 			    contenidoPDF.newLine(); 
 			    alturaPrimeraPregunta -= 20; 
 			    contenidoPDF.endText();
 			    
 				contenidoPDF.beginText();
 			    contenidoPDF.newLineAtOffset(40, alturaPrimeraPregunta);
-			    contenidoPDF.showText("A) "+Preguntas.getListaDePreguntas().get(i).getRespuestaCorrecta());
+			    contenidoPDF.showText("A) "+Capitales.getListaDePreguntas().get(i).getRespuestaCorrecta());
 			    contenidoPDF.newLine(); 
 			    alturaPrimeraPregunta -= 20; 
 			    contenidoPDF.endText();
 			    
 				contenidoPDF.beginText();
 			    contenidoPDF.newLineAtOffset(40, alturaPrimeraPregunta);
-			    contenidoPDF.showText("B) "+Preguntas.getListaDePreguntas().get(i).getRespuestaIncorrectaA());
+			    contenidoPDF.showText("B) "+Capitales.getListaDePreguntas().get(i).getRespuestaIncorrectaA());
 			    contenidoPDF.newLine(); 
 			    alturaPrimeraPregunta -= 20; 
 			    contenidoPDF.endText();
 			    
 				contenidoPDF.beginText();
 			    contenidoPDF.newLineAtOffset(40, alturaPrimeraPregunta);
-			    contenidoPDF.showText("C) "+Preguntas.getListaDePreguntas().get(i).getRespuestaIncorrectaB());
+			    contenidoPDF.showText("C) "+Capitales.getListaDePreguntas().get(i).getRespuestaIncorrectaB());
 			    contenidoPDF.newLine(); 
 			    alturaPrimeraPregunta -= 20; 
 			    contenidoPDF.endText();
 			    
 				contenidoPDF.beginText();
 			    contenidoPDF.newLineAtOffset(40, alturaPrimeraPregunta);
-			    contenidoPDF.showText("D) "+Preguntas.getListaDePreguntas().get(i).getRespuestaIncorrectaC());
+			    contenidoPDF.showText("D) "+Capitales.getListaDePreguntas().get(i).getRespuestaIncorrectaC());
 			    contenidoPDF.newLine(); 
 			    alturaPrimeraPregunta -= 40; 
 			    contenidoPDF.endText();

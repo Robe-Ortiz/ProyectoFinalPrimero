@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 
 import java.io.IOException;
 
-import es.finalPrimerCurso.finalPrimerCurso.Clases.Preguntas;
+import es.finalPrimerCurso.finalPrimerCurso.Clases.Capitales;
 import javafx.event.ActionEvent;
 
 public class SeleccionCantidadPreguntasCapitalesController {
@@ -20,24 +20,24 @@ public class SeleccionCantidadPreguntasCapitalesController {
 	// Event Listener on Button.onAction
 	@FXML
 	public void facil(ActionEvent event) {
-		Preguntas.setCantidadDePreguntas(3);
-		Preguntas.setCantidadDePreguntasOriginal(3);
+		Capitales.setCantidadDePreguntas(3);
+		Capitales.setCantidadDePreguntasOriginal(3);
 		avanzar();
 	}
 	public void moderado(ActionEvent event) {
-		Preguntas.setCantidadDePreguntas(5);
-		Preguntas.setCantidadDePreguntasOriginal(5);
+		Capitales.setCantidadDePreguntas(5);
+		Capitales.setCantidadDePreguntasOriginal(5);
 		avanzar();
 	}
 	public void dificil(ActionEvent event) {
-		Preguntas.setCantidadDePreguntas(10);
-		Preguntas.setCantidadDePreguntasOriginal(10);
+		Capitales.setCantidadDePreguntas(10);
+		Capitales.setCantidadDePreguntasOriginal(10);
 		avanzar();
 	}
 	
 	public void extremo(ActionEvent event) {
-		Preguntas.setCantidadDePreguntas(Preguntas.getListaDePreguntas().size());
-		Preguntas.setCantidadDePreguntasOriginal(Preguntas.getListaDePreguntas().size());
+		Capitales.setCantidadDePreguntas(Capitales.getListaDePreguntas().size());
+		Capitales.setCantidadDePreguntasOriginal(Capitales.getListaDePreguntas().size());
 		PreguntasCapitalesController.iniciarModoExtremo();
 		avanzar();
 	}

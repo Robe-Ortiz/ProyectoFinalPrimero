@@ -21,10 +21,9 @@
 		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 		<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
 		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-		<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
 		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-		<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 	</rowConstraints>
 	<children>
@@ -35,5 +34,6 @@
 		</Label>
 		<Button mnemonicParsing="false" onAction="#capitalesMundiales" prefHeight="25.0" prefWidth="450.0" stylesheets="@estilos.css" text="Capitales mundiales" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
 		<Button mnemonicParsing="false" onAction="#extensionPaises" prefHeight="25.0" prefWidth="450.0" stylesheets="@estilos.css" text="Extensión de países" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+      <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#adivinaLaPalabra" prefHeight="25.0" prefWidth="450.0" stylesheets="@estilos.css" text="Adivina la palabra" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
 	</children>
 </GridPane>

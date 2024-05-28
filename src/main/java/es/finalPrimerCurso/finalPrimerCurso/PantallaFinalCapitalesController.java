@@ -11,7 +11,7 @@ import javax.swing.SwingUtilities;
 import es.finalPrimerCurso.finalPrimerCurso.Clases.CreaEImprimeGraficaCapitales;
 import es.finalPrimerCurso.finalPrimerCurso.Clases.CrearEImprimirPDF;
 import es.finalPrimerCurso.finalPrimerCurso.Clases.CrearEImprimirWord;
-import es.finalPrimerCurso.finalPrimerCurso.Clases.Preguntas;
+import es.finalPrimerCurso.finalPrimerCurso.Clases.Capitales;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
@@ -91,7 +91,7 @@ public class PantallaFinalCapitalesController {
 	public void volverInicio(ActionEvent event) {
 		try {
 			PreguntasCapitalesController.restablecerPartida();
-			Collections.shuffle(Preguntas.getListaDePreguntas());
+			Collections.shuffle(Capitales.getListaDePreguntas());
 			App.setRoot("seleccionCantidadPreguntasCapitales");
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -103,7 +103,7 @@ public class PantallaFinalCapitalesController {
     void btnCerrarSesion(ActionEvent event) {
 		try {
 			PreguntasCapitalesController.restablecerPartida();
-			Collections.shuffle(Preguntas.getListaDePreguntas());
+			Collections.shuffle(Capitales.getListaDePreguntas());
 			App.setRoot("primeraEscena");
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -114,7 +114,7 @@ public class PantallaFinalCapitalesController {
     void elegirJuego(ActionEvent event) {
 		try {
 			PreguntasCapitalesController.restablecerPartida();
-			Collections.shuffle(Preguntas.getListaDePreguntas());
+			Collections.shuffle(Capitales.getListaDePreguntas());
 			App.setRoot("SeleccionDeJuego");
 		} catch (IOException e) {
 			e.printStackTrace();

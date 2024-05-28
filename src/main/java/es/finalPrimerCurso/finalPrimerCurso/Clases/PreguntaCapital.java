@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 
-public class Pregunta {
+public class PreguntaCapital {
 	
 	private int numeroPregunta;
 	private static int nextNumeroPregunta = 1;
@@ -18,7 +18,7 @@ public class Pregunta {
 	private List<String> conjuntoDeRespuestas = new ArrayList<>();
 	
 	
-	public Pregunta(String pregunta, String respuestaCorrecta, String respuestaIncorrectaA,
+	public PreguntaCapital(String pregunta, String respuestaCorrecta, String respuestaIncorrectaA,
 			String respuestaIncorrectaB, String respuestaIncorrectaC) {
 		
 		this.numeroPregunta = nextNumeroPregunta++;

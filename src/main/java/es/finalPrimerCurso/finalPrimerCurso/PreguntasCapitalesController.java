@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
-import es.finalPrimerCurso.finalPrimerCurso.Clases.Preguntas;
+import es.finalPrimerCurso.finalPrimerCurso.Clases.Capitales;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -58,11 +58,11 @@ public class PreguntasCapitalesController implements Initializable {
 	}
 
 	public void initialize(URL location, ResourceBundle resources) {
-		pregunta.setText(Preguntas.getListaDePreguntas().get(index).getPregunta());
-		respuesta1.setText(Preguntas.getListaDePreguntas().get(index).getConjuntoDeRespuestas().get(0));
-		respuesta2.setText(Preguntas.getListaDePreguntas().get(index).getConjuntoDeRespuestas().get(1));
-		respuesta3.setText(Preguntas.getListaDePreguntas().get(index).getConjuntoDeRespuestas().get(2));
-		respuesta4.setText(Preguntas.getListaDePreguntas().get(index).getConjuntoDeRespuestas().get(3));
+		pregunta.setText(Capitales.getListaDePreguntas().get(index).getPregunta());
+		respuesta1.setText(Capitales.getListaDePreguntas().get(index).getConjuntoDeRespuestas().get(0));
+		respuesta2.setText(Capitales.getListaDePreguntas().get(index).getConjuntoDeRespuestas().get(1));
+		respuesta3.setText(Capitales.getListaDePreguntas().get(index).getConjuntoDeRespuestas().get(2));
+		respuesta4.setText(Capitales.getListaDePreguntas().get(index).getConjuntoDeRespuestas().get(3));
 	}
 
 	private void mensajeRespuestaIncorrecta(ActionEvent event) {
@@ -102,14 +102,14 @@ public class PreguntasCapitalesController implements Initializable {
 		alert.setHeaderText(null);
 		alert.setTitle("Enhorabuena por contestar todas las preguntas");
 		alert.setContentText(
-				"Cantidad de preguntas: " + Preguntas.getCantidadDePreguntasOriginal() + "\n" + "Errores: " + +errores);
+				"Cantidad de preguntas: " + Capitales.getCantidadDePreguntasOriginal() + "\n" + "Errores: " + +errores);
 		alert.showAndWait();
 	}
 
 	private void avanzar() {
-		Preguntas.setCantidadDePreguntas(Preguntas.getCantidadDePreguntas() - 1);
+		Capitales.setCantidadDePreguntas(Capitales.getCantidadDePreguntas() - 1);
 
-		if (Preguntas.getCantidadDePreguntas() == 0) {
+		if (Capitales.getCantidadDePreguntas() == 0) {
 			try {
 				mensajeResultado(null);
 				App.setRoot("pantallaFinalCapitales");
@@ -129,7 +129,7 @@ public class PreguntasCapitalesController implements Initializable {
 
 	@FXML
 	public void btnRespuesta1(ActionEvent event) {
-		if(respuesta1.getText().equals(Preguntas.getListaDePreguntas().get(index).getRespuestaCorrecta())) {
+		if(respuesta1.getText().equals(Capitales.getListaDePreguntas().get(index).getRespuestaCorrecta())) {
 			avanzar();
 		}else if(modoExtremo) {	
 			respuestaIncorrectaModoExtremo(event);
@@ -140,7 +140,7 @@ public class PreguntasCapitalesController implements Initializable {
 
 	@FXML
 	public void btnRespuesta2(ActionEvent event) {
-		if (respuesta2.getText().equals(Preguntas.getListaDePreguntas().get(index).getRespuestaCorrecta())) {
+		if (respuesta2.getText().equals(Capitales.getListaDePreguntas().get(index).getRespuestaCorrecta())) {
 			avanzar();
 		}else if(modoExtremo) {	
 			respuestaIncorrectaModoExtremo(event);
@@ -151,7 +151,7 @@ public class PreguntasCapitalesController implements Initializable {
 
 	@FXML
 	public void btnRespuesta3(ActionEvent event) {
-		if (respuesta3.getText().equals(Preguntas.getListaDePreguntas().get(index).getRespuestaCorrecta())) {
+		if (respuesta3.getText().equals(Capitales.getListaDePreguntas().get(index).getRespuestaCorrecta())) {
 			avanzar();
 		}else if(modoExtremo) {	
 			respuestaIncorrectaModoExtremo(event);
@@ -162,7 +162,7 @@ public class PreguntasCapitalesController implements Initializable {
 
 	@FXML
 	public void btnRespuesta4(ActionEvent event) {
-		if (respuesta4.getText().equals(Preguntas.getListaDePreguntas().get(index).getRespuestaCorrecta())) {
+		if (respuesta4.getText().equals(Capitales.getListaDePreguntas().get(index).getRespuestaCorrecta())) {
 			avanzar();
 		}else if(modoExtremo) {	
 			respuestaIncorrectaModoExtremo(event);
@@ -175,7 +175,7 @@ public class PreguntasCapitalesController implements Initializable {
 	void btnReset(ActionEvent event) {
 		try {
 			PreguntasCapitalesController.restablecerPartida();
-			Collections.shuffle(Preguntas.getListaDePreguntas());
+			Collections.shuffle(Capitales.getListaDePreguntas());
 			App.setRoot("seleccionCantidadPreguntasCapitales");
 		} catch (IOException e) {
 			e.printStackTrace();

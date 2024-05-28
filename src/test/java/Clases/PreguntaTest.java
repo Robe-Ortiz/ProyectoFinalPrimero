@@ -5,15 +5,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import es.finalPrimerCurso.finalPrimerCurso.Clases.Pregunta;
+import es.finalPrimerCurso.finalPrimerCurso.Clases.PreguntaCapital;
 
 public class PreguntaTest {
 	
-	private Pregunta pregunta;
+	private PreguntaCapital pregunta;
 
 	@BeforeEach
 	void setUp() {
-		pregunta = new Pregunta("¿Capital de España?","Madrid","Barcelona","Sevilla","Murcia");
+		pregunta = new PreguntaCapital("¿Capital de España?","Madrid","Barcelona","Sevilla","Murcia");
 	}
 	
 	@Test

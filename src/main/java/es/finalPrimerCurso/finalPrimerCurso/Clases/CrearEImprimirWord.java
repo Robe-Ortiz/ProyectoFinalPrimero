@@ -19,11 +19,11 @@ public class CrearEImprimirWord {
 	
 	private void incluirPreguntasYRespuestas(XWPFDocument documento) {
         for(int i = 0; i <PreguntasCapitalesController.getPreguntasContestadas()+1 ;i++) {
-        	agregarParrafo(documento, Preguntas.getListaDePreguntas().get(i).getPregunta());
-        	agregarParrafo(documento, "A) "+Preguntas.getListaDePreguntas().get(i).getRespuestaCorrecta());
-        	agregarParrafo(documento, "B) "+Preguntas.getListaDePreguntas().get(i).getRespuestaIncorrectaA());
-        	agregarParrafo(documento, "C) "+Preguntas.getListaDePreguntas().get(i).getRespuestaIncorrectaB());
-        	agregarParrafo(documento, "D) "+Preguntas.getListaDePreguntas().get(i).getRespuestaIncorrectaC());   
+        	agregarParrafo(documento, Capitales.getListaDePreguntas().get(i).getPregunta());
+        	agregarParrafo(documento, "A) "+Capitales.getListaDePreguntas().get(i).getRespuestaCorrecta());
+        	agregarParrafo(documento, "B) "+Capitales.getListaDePreguntas().get(i).getRespuestaIncorrectaA());
+        	agregarParrafo(documento, "C) "+Capitales.getListaDePreguntas().get(i).getRespuestaIncorrectaB());
+        	agregarParrafo(documento, "D) "+Capitales.getListaDePreguntas().get(i).getRespuestaIncorrectaC());   
         	documento.createParagraph().createRun().addCarriageReturn();
         }
 	}

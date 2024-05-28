@@ -23,5 +23,11 @@ public class SeleccionDeJuegoController {
     void extensionPaises(ActionEvent event) {
     	avanzar("SeleccionCantidadPreguntasExtension");
     }
+    
+    @FXML
+    void adivinaLaPalabra(ActionEvent event) {
+
+    }
+
 
 }

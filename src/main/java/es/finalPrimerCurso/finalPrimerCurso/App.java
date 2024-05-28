@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 import es.finalPrimerCurso.finalPrimerCurso.Clases.ExtensionPaises;
-import es.finalPrimerCurso.finalPrimerCurso.Clases.Preguntas;
+import es.finalPrimerCurso.finalPrimerCurso.Clases.Capitales;
 import es.finalPrimerCurso.finalPrimerCurso.Clases.Usuarios;
 
 /**
@@ -38,7 +38,7 @@ public class App extends Application {
 
     public static void main(String[] args) {
     	Usuarios usuarios = new Usuarios();
-    	Preguntas preguntas = new Preguntas(); 
+    	Capitales preguntas = new Capitales(); 
     	ExtensionPaises extensiones = new ExtensionPaises();
         launch();
     }
