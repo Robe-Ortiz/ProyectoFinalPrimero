@@ -3,6 +3,7 @@ import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 
 public class SeleccionDeJuegoController {
 
@@ -26,8 +27,16 @@ public class SeleccionDeJuegoController {
     
     @FXML
     void adivinaLaPalabra(ActionEvent event) {
-
+    	avisoEnConstruccion(event);
     }
 
+    
+    private void avisoEnConstruccion(ActionEvent event) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText(null);
+        alert.setTitle("Juego no disponible");
+        alert.setContentText("Actualmente este juego no está disponible");
+        alert.showAndWait();
+    }
 
 }
